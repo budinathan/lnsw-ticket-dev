@@ -1,5 +1,6 @@
 import { StateCreator } from "zustand";
 import axios from "axios";
+import { apiUrl } from "@/constant/env";
 
 export interface Form {
   rows: {
@@ -38,7 +39,7 @@ export const formSlice: StateCreator<FormState> = (set, get) => ({
     url?: string
   ) => {
     try {
-      axios.post("http://localhost:3000/api/form", {
+      axios.post(`${apiUrl}/form`, {
         name,
         email,
         judulLaporan,
@@ -51,7 +52,7 @@ export const formSlice: StateCreator<FormState> = (set, get) => ({
   },
   getForm: async () => {
     try {
-      const form = await axios.get("http://localhost:3000/api/form");
+      const form = await axios.get(`${apiUrl}/form`);
       set({ forms: form.data });
     } catch (err) {
       console.log(err);
@@ -59,7 +60,7 @@ export const formSlice: StateCreator<FormState> = (set, get) => ({
   },
   deleteForm: async (id: number) => {
     try {
-      await axios.delete(`http://localhost:3000/api/delete/${id}`);
+      await axios.delete(`${apiUrl}/delete/${id}`);
     } catch (err) {
       console.log(err);
     }

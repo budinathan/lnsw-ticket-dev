@@ -1,5 +1,6 @@
 import { StateCreator } from "zustand";
 import axios from "axios";
+import { apiUrl } from "@/constant/env";
 
 export interface ChatForm {
   rows: {
@@ -26,7 +27,7 @@ export const chatFormSlice: StateCreator<ChatFormState> = (set, get) => ({
   },
   getById: async (id: number) => {
     try {
-      const chat = await axios.get(`http://localhost:3000/api/chat/${id}`);
+      const chat = await axios.get(`${apiUrl}/chat/${id}`);
       set({ chatforms: chat.data });
     } catch (err) {
       console.log(err);

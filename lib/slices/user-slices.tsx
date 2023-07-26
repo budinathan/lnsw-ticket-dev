@@ -1,5 +1,6 @@
 import { StateCreator } from "zustand";
 import axios from "axios";
+import { apiUrl } from "@/constant/env";
 
 export interface User {
   id: number;
@@ -17,7 +18,7 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
   users: null,
   registerUser: async (username: string, password: string) => {
     try {
-      await axios.post("http://localhost:3000/api/register", {
+      await axios.post(`${apiUrl}/register`, {
         username,
         password,
       });
@@ -27,7 +28,7 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
   },
   loginUser: async (username: string, password: string) => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
+      await axios.post(`${apiUrl}/login`, {
         username,
         password,
       });
@@ -36,7 +37,7 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
     }
   },
   getUserInfo: async () => {
-    const userInfo = await axios.get("http://localhost:3000/api/login");
+    const userInfo = await axios.get(`${apiUrl}/login`);
     set({ users: userInfo.data });
   },
 });
