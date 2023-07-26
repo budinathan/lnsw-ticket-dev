@@ -1,11 +1,11 @@
 import { useAppStore } from "@/lib/store";
-import { useRouter } from "next/router";
 import Button from "@/components/core/button";
-import Header from "@/modules/login/login-header";
 import Footer from "@/modules/register/register-footer";
-import InfoLogin from "@/modules/login/info";
-import PasswordInput from "@/components/form/password-input";
+import InfoRegister from "@/modules/register/info";
+import Header from "@/modules/register/register-Header";
+import { useRouter } from "next/router";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import PasswordInput from "@/components/form/password-input";
 import UsernameInput from "@/components/form/username-input";
 
 type Inputs = {
@@ -13,17 +13,16 @@ type Inputs = {
   password: string;
 };
 
-export default function LoginModule() {
-  const { loginUser } = useAppStore();
+export default function RegisterModule() {
+  const { registerUser } = useAppStore();
   const router = useRouter();
-
   const methods = useForm<Inputs>({
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await loginUser(data.username, data.password);
-    router.push("/home");
+    await registerUser(data.username, data.password);
+    router.push("/");
     console.log({ data });
     return;
   };
@@ -43,10 +42,10 @@ export default function LoginModule() {
               label="Password"
               placeholder="Enter your password"
             />
-            <InfoLogin />
+            <InfoRegister />
             <div className="flex justify-end mt-2">
-              <Button variant="default" size="default" type="submit">
-                Masuk
+              <Button type="submit" variant="default" size="default">
+                Register
               </Button>
             </div>
           </FormProvider>

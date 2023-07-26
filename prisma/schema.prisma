@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  userid   Int      @id @default(autoincrement())
+  username String   @db.VarChar(255)
+  password String   @db.VarChar(255)
+  ticket   ticket[]
+}
+
+model ticket {
+  tiketid          Int     @id @default(autoincrement())
+  jenis            String  @db.VarChar(255)
+  keterangan       String  @db.VarChar(255)
+  tanggalpengajuan String  @db.VarChar(225)
+  status           String  @db.VarChar(255)
+  pengaju          String  @db.VarChar(255)
+  email            String  @db.VarChar(255)
+  url              String? @db.VarChar(255)
+  filepengajuan    String? @db.VarChar(255)
+  idpengaju        users   @relation(fields: [usersUserid], references: [userid])
+  usersUserid      Int
+}
