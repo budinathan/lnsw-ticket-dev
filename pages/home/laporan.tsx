@@ -11,6 +11,7 @@ import { useState } from "react";
 import ModalSalah from "@/components/modals/modal-tidaklengkap-laporan";
 import DropzoneInput from "@/components/form/dropzone-input";
 import Typography from "@/components/core/typography";
+import Seo from "@/components/core/seo";
 
 type Inputs = {
   name: string;
@@ -50,6 +51,10 @@ export default function Laporan() {
   };
   return (
     <main>
+      <Seo
+        title="Laporan Layanan LNSW"
+        description="Isi form untuk mengajukan layanan kepada LNSW."
+      />
       <Typography variant="largebold">Formulir Laporan</Typography>
       <section className="bg-white rounded-md shadow-md">
         <form onSubmit={handleSubmit(onSubmit)} className="form">

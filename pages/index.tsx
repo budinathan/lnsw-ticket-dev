@@ -7,6 +7,7 @@ import InfoLogin from "@/modules/login/info";
 import PasswordInput from "@/components/form/password-input";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import UsernameInput from "@/components/form/username-input";
+import Seo from "@/components/core/seo";
 
 type Inputs = {
   username: string;
@@ -29,6 +30,10 @@ export default function LoginModule() {
   };
   return (
     <main className="screen">
+      <Seo
+        title="Login Layanan LNSW"
+        description="Login terlebih dahulu untuk menggunakan layanan LNSW!"
+      />
       <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0">
         <Header />
         <form onSubmit={handleSubmit(onSubmit)} className="mt-2 mb-4">

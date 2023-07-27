@@ -1,3 +1,4 @@
+import Seo from "@/components/core/seo";
 import useForm from "@/hooks/get-form-client";
 import { getUser } from "@/hooks/get-user-server";
 import HeaderRiwayat from "@/modules/riwayat/header-riwayat";
@@ -8,6 +9,10 @@ export default function Riwayat() {
   const { search, setSearch, formsFilter } = useForm();
   return (
     <main className="h-screen translate-y-[35px]">
+      <Seo
+        title="Riwayat Layanan LNSW"
+        description="Riwayat layanan LNSW akun anda."
+      />
       <section className="bg-white p-10 rounded-lg w-full">
         <HeaderRiwayat search={search} setSearch={setSearch} />
         <Table formsFilter={formsFilter} />

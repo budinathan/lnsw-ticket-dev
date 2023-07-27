@@ -1,3 +1,4 @@
+import Seo from "@/components/core/seo";
 import Typography from "@/components/core/typography";
 import { getUser } from "@/hooks/get-user-server";
 import { User } from "@/lib/slices/user-slices";
@@ -7,6 +8,10 @@ import { GetServerSidePropsContext } from "next";
 export default function Home({ user }: { user: User }) {
   return (
     <main className="h-screen">
+      <Seo
+        title="Home Layanan LNSW"
+        description="Riwayat pengajuan, Pengajuan, dan Chatroom."
+      />
       <section>
         <Typography variant="large">Welcome {user?.username}</Typography>
       </section>
