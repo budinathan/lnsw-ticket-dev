@@ -8,6 +8,8 @@ import PasswordInput from "@/components/form/password-input";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import UsernameInput from "@/components/form/username-input";
 import Seo from "@/components/core/seo";
+import { redirectUser } from "@/hooks/redirect-user";
+import { GetServerSidePropsContext } from "next";
 
 type Inputs = {
   username: string;
@@ -60,4 +62,8 @@ export default function LoginModule() {
       </section>
     </main>
   );
+}
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  return await redirectUser(ctx);
 }
