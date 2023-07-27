@@ -15,7 +15,7 @@ export default function HeaderRiwayat({
     router.push("/home/laporan");
   }
   return (
-    <main className="flex justify-between items-center">
+    <main className="flex justify-between items-center max-sm:flex-col max-sm:items-start gap-2">
       <section>
         <Typography variant="largebold">Riwayat Laporan</Typography>
       </section>

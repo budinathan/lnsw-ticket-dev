@@ -13,15 +13,15 @@ export default function Chatroom() {
         title="Chatroom Layanan LNSW"
         description="Cek progress layanan yang anda ajukan."
       />
-      <section className=" border-opacity-25  w-1/3  mx-2 p-2 overflow-auto">
+      <section className=" border-opacity-25  w-1/3  mx-2 p-2 overflow-auto max-sm:w-full">
         <ContactList
           search={search}
           setSearch={setSearch}
           formsFilter={formsFilter}
         />
       </section>
-      <div className="h-full w-[4px] bg-greybg"></div>
-      <section className="w-2/3 mx-2 relative flex flex-col items-center justify-center">
+      <div className="h-full w-[4px] bg-greybg max-sm:hidden"></div>
+      <section className="w-2/3 mx-2 relative flex flex-col items-center justify-center max-sm:hidden">
         <ChatKosong />
       </section>
     </main>

@@ -8,7 +8,7 @@ export default function Navbar() {
   }
 
   return (
-    <main className="flex justify-between text-white bg-bluebg py-2 px-12 z-50 rounded-sm shadow-lg sticky top-0">
+    <main className="flex justify-between text-white bg-bluebg py-2 px-12 -z-10 rounded-sm shadow-lg sticky top-0 max-md:px-6">
       <Link href="/home">
         <img src="/logoLNSW.png" alt="logo lnsw" className="h-[45px]" />
       </Link>

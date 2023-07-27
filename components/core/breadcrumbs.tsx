@@ -9,7 +9,7 @@ export default function Breadcrumbs() {
 
   return (
     <main className="bg-white py-4">
-      <div className="max-w-7xl mx-auto flex gap-2 px-16">
+      <div className="max-w-7xl mx-auto flex gap-2 px-16 max-md:px-6">
         {segments.map((segment, index) => {
           const currentSegment = segment === "[id]" ? "Chats" : segment;
 

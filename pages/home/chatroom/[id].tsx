@@ -13,15 +13,15 @@ export default function ChatroomId() {
         title="Chat Layanan LNSW"
         description="Cek progress layanan yang anda ajukan."
       />
-      <section className=" border-opacity-25  w-1/3  mx-2 p-2 overflow-auto">
+      <section className=" border-opacity-25  w-1/3  mx-2 p-2 overflow-auto max-sm:hidden">
         <ContactList
           search={search}
           setSearch={setSearch}
           formsFilter={formsFilter}
         />
       </section>
-      <div className="h-full w-[4px] bg-greybg"></div>
-      <section className="w-2/3 mx-2 relative overflow-auto  p-2">
+      <div className="h-full w-[4px] bg-greybg max-sm:hidden"></div>
+      <section className="w-2/3 mx-2 relative overflow-auto max-sm:w-full p-2">
         <ChatRoom />
       </section>
     </main>

@@ -27,7 +27,7 @@ export default function ModalBalik({
           <div className="text-[8rem] flex justify-center text-[#FAC000]">
             <PiWarningFill />
           </div>
-          <Typography variant="largebold">Kemabali ke menu utama?</Typography>
+          <Typography variant="largebold">Kembali ke menu utama?</Typography>
           <Typography variant="small" className="text-center">
             Apabila anda akan kembali ke menu utama, data yang anda isi akan
             terhapus, Anda yakin?

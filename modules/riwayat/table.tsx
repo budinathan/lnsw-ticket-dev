@@ -17,7 +17,7 @@ export default function Table({ formsFilter }: { formsFilter: Form["rows"] }) {
 
   return (
     <>
-      <table className="table-auto w-full  mt-5 rounded border-separate border-spacing-y-3">
+      <table className="table-auto w-full  mt-3 rounded border-separate border-spacing-y-3">
         <thead>
           <tr className="bg-[#B1BCCD]">
             <th className="p-2 rounded-l-lg">
@@ -38,7 +38,7 @@ export default function Table({ formsFilter }: { formsFilter: Form["rows"] }) {
             <th className="rounded-r-lg">Aksi</th>
           </tr>
         </thead>
-        <tbody className=" text-center ">
+        <tbody className=" text-center">
           {currentItems?.map((item: any, index: any) => {
             return (
               <tr className="bg-[#D1D5DA]" key={index}>

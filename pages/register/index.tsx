@@ -35,7 +35,7 @@ export default function RegisterModule() {
         title="Registrasi Akun Layanan LNSW"
         description="Registrasi Akun terlebih dahulu untuk menggunakan layanan LNSW!"
       />
-      <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0">
+      <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0 max-sm:relative max-sm:w-full">
         <Header />
         <form onSubmit={handleSubmit(onSubmit)} className="mt-2 mb-4">
           <FormProvider {...methods}>

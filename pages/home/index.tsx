@@ -15,7 +15,7 @@ export default function Home({ user }: { user: User }) {
       <section>
         <Typography variant="large">Welcome {user?.username}</Typography>
       </section>
-      <section className="grid grid-cols-3 gap-5 mt-5 ">
+      <section className="grid grid-cols-3 gap-5 mt-5 max-md:grid-cols-2 max-sm:grid-cols-1">
         <NavHome />
       </section>
     </main>

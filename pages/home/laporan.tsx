@@ -90,7 +90,7 @@ export default function Laporan() {
               label="Unggah bukti laporan"
               accept={{ "image/*": [".png", ".jpg", ".jpeg"] }}
             />
-            <div className="flex justify-between">
+            <div className="flex justify-between max-sm:flex-col-reverse max-sm:gap-3">
               <ModalBalik>
                 {({ openModal }) => (
                   <Button
@@ -98,12 +98,18 @@ export default function Laporan() {
                     variant="default"
                     size="submit"
                     type="button"
+                    className="max-sm:w-full"
                   >
                     Balik
                   </Button>
                 )}
               </ModalBalik>
-              <Button variant="default" size="submit" type="submit">
+              <Button
+                variant="default"
+                size="submit"
+                type="submit"
+                className="max-sm:w-full"
+              >
                 Submit Laporan
               </Button>
             </div>

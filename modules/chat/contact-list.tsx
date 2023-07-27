@@ -48,7 +48,7 @@ export default function ContactList({
                 <Typography variant="mediumbold">{item?.jenis}</Typography>
                 <Typography
                   variant="small"
-                  className="single-line-paragraph overflow-hidden"
+                  className="white-space:nowrap overflow-hidden text-start"
                 >
                   {`${item?.keterangan.substring(0, 57)}.....`}
                 </Typography>

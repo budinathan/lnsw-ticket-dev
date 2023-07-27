@@ -13,7 +13,7 @@ export default function Riwayat() {
         title="Riwayat Layanan LNSW"
         description="Riwayat layanan LNSW akun anda."
       />
-      <section className="bg-white p-10 rounded-lg w-full">
+      <section className="bg-white p-10 rounded-lg w-full max-sm:overflow-auto max-sm:p-7">
         <HeaderRiwayat search={search} setSearch={setSearch} />
         <Table formsFilter={formsFilter} />
       </section>
