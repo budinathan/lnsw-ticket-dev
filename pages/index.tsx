@@ -44,11 +44,13 @@ export default function LoginModule() {
               id="username"
               label="Username"
               placeholder="Enter your username"
+              required
             />
             <PasswordInput
               id="password"
               label="Password"
               placeholder="Enter your password"
+              required
             />
             <InfoLogin />
             <div className="flex justify-end mt-2">

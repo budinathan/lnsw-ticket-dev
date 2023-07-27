@@ -43,11 +43,13 @@ export default function RegisterModule() {
               id="username"
               label="Username"
               placeholder="Enter your username"
+              required
             />
             <PasswordInput
               id="password"
               label="Password"
               placeholder="Enter your password"
+              required
             />
             <InfoRegister />
             <div className="flex justify-end mt-2">
