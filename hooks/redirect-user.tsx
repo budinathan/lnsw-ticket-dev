@@ -5,7 +5,7 @@ import { GetServerSidePropsContext } from "next";
 export async function redirectUser(ctx: GetServerSidePropsContext) {
   const token = ctx.req.cookies.token as string;
   if (token) {
-    const userToken = await new Promise((resolve, reject) => {
+    const noToken = await new Promise((resolve, reject) => {
       jwt.verify(
         token.substring(1, token.length - 1),
         process.env.TOKEN_SECRET as string,
@@ -24,6 +24,8 @@ export async function redirectUser(ctx: GetServerSidePropsContext) {
       },
     };
   } else {
-    return null;
+    return {
+      props: {},
+    };
   }
 }
