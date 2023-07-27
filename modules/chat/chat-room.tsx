@@ -43,7 +43,10 @@ export default function ChatRoom() {
         <div className="flex relative items-center shadow-md">
           <input
             placeholder="Tuliskan pesan anda"
-            className="bg-greybg rounded-md px-2 py-3 w-full text-sm"
+            className={`bg-greybg rounded-md px-2 py-3 w-full text-sm ${
+              chatforms?.rows?.status === "Selesai" ? "cursor-not-allowed" : ""
+            }`}
+            disabled={chatforms?.rows?.status === "Selesai"}
           />
           <GoPaperAirplane className="absolute right-2 opacity-50 focus:outline-none" />
         </div>
