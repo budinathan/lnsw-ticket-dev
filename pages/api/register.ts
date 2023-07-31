@@ -9,6 +9,11 @@ export default async function handleRegister(
   res: NextApiResponse
 ) {
   const { username, password } = req.body;
+  if (typeof username !== "string" || typeof password !== "string") {
+    return res
+      .status(406)
+      .json({ message: "Username or password is not a string" });
+  }
   switch (req.method) {
     case "POST":
       try {
