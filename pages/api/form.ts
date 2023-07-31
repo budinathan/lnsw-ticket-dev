@@ -11,9 +11,19 @@ export default async function handleForm(
   res: NextApiResponse
 ) {
   const token = req.cookies.token as string;
+  const { name, email, judulLaporan, deskripsiLaporan, url } = req.body;
+
   switch (req.method) {
     case "POST":
-      const { name, email, judulLaporan, deskripsiLaporan, url } = req.body;
+      if (
+        typeof name !== "string" ||
+        typeof email !== "string" ||
+        typeof judulLaporan !== "string" ||
+        typeof deskripsiLaporan !== "string" ||
+        typeof url !== "string"
+      ) {
+        return res.status(406).json({ message: "Type is not a string" });
+      }
       try {
         if (token) {
           jwt.verify(
