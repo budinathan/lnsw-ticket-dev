@@ -63,22 +63,26 @@ export default function Laporan() {
               id="name"
               label="Nama"
               placeholder="Masukkan nama anda"
+              required
             />
             <LaporanInput
               id="email"
               label="Email"
               placeholder="Masukkan email anda"
               type="email"
+              required
             />
             <LaporanInput
               id="judulLaporan"
               label="Judul Laporan"
               placeholder="Tuliskan inti dari laporan anda"
+              required
             />
             <TextArea
               id="deskripsiLaporan"
               label="Deskripsi Laporan"
               placeholder="Tuliskan laporan anda"
+              required
             />
             <LaporanInput
               id="url"
