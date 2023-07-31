@@ -33,7 +33,7 @@ export default function ContactList({
             <div
               key={index}
               className={`mb-2 px-4 py-2 rounded-md w-full ${
-                router.asPath === `chatroom/${item?.tiketid}`
+                router.asPath === `/home/chatroom/${item?.tiketid}`
                   ? "bg-[#CBCDD1]"
                   : ""
               }`}
