@@ -23,7 +23,8 @@ export interface FormState {
     email: string,
     judulLaporan: string,
     deskripsiLaporan: string,
-    url?: string
+    url?: string,
+    filepengajuan?: string
   ) => Promise<void>;
   getForm: () => void;
   deleteForm: (id: number) => void;

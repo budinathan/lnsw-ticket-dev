@@ -19,6 +19,7 @@ type Inputs = {
   judulLaporan: string;
   deskripsiLaporan: string;
   url: string;
+  photo: string;
 };
 
 export default function Laporan() {
@@ -29,6 +30,7 @@ export default function Laporan() {
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
+  console.log(methods.getValues("photo"));
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     if (
       !data.email ||
@@ -49,6 +51,7 @@ export default function Laporan() {
       setOpens(true);
     }
   };
+
   return (
     <main>
       <Seo

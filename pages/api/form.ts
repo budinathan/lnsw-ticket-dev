@@ -12,7 +12,6 @@ export default async function handleForm(
 ) {
   const token = req.cookies.token as string;
   const { name, email, judulLaporan, deskripsiLaporan, url } = req.body;
-
   switch (req.method) {
     case "POST":
       if (
