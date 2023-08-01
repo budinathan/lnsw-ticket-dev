@@ -18,35 +18,16 @@ export interface Form {
 
 export interface FormState {
   forms: Form;
-  postForm: (
-    name: string,
-    email: string,
-    judulLaporan: string,
-    deskripsiLaporan: string,
-    url?: string,
-    filepengajuan?: string
-  ) => Promise<void>;
+  postForm: (forms: any) => Promise<void>;
   getForm: () => void;
   deleteForm: (id: number) => void;
 }
 
 export const formSlice: StateCreator<FormState> = (set, get) => ({
   forms: { rows: [] },
-  postForm: async (
-    name: string,
-    email: string,
-    judulLaporan: string,
-    deskripsiLaporan: string,
-    url?: string
-  ) => {
+  postForm: async (forms) => {
     try {
-      axios.post(`${apiUrl}/form`, {
-        name,
-        email,
-        judulLaporan,
-        deskripsiLaporan,
-        url,
-      });
+      axios.post(`${apiUrl}/createForm`, forms);
     } catch (err) {
       console.log(err);
     }

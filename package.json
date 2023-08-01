@@ -22,9 +22,11 @@
     "cookie": "^0.5.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.11",
+    "formidable": "^3.5.0",
     "jsonwebtoken": "^9.0.1",
     "lodash.get": "^4.4.2",
     "lucide-react": "^0.263.0",
+    "multiparty": "^4.2.3",
     "next": "13.4.11",
     "nextjs-progressbar": "^0.0.16",
     "postcss": "8.4.26",
@@ -41,8 +43,10 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.5.1",
+    "@types/formidable": "^3.4.0",
     "@types/jsonwebtoken": "^9.0.2",
     "@types/lodash.get": "^4.4.7",
+    "@types/multiparty": "^0.0.33",
     "prisma": "^5.0.0"
   }
 }

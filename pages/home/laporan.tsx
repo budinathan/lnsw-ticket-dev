@@ -19,7 +19,7 @@ type Inputs = {
   judulLaporan: string;
   deskripsiLaporan: string;
   url: string;
-  photo: string;
+  photo: FileList;
 };
 
 export default function Laporan() {
@@ -30,8 +30,18 @@ export default function Laporan() {
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
-  console.log(methods.getValues("photo"));
+  // console.log(methods.getValues("photo"));
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const forms = new FormData();
+    forms.append("name", data.name);
+    forms.append("email", data.email);
+    forms.append("judulLaporan", data.judulLaporan);
+    forms.append("deskripsiLaporan", data.deskripsiLaporan);
+    forms.append("url", data.url);
+    if (data.photo && data.photo.length > 0) {
+      forms.append("photo", data.photo[0].name);
+    }
+    console.log(data.photo[0]);
     if (
       !data.email ||
       !data.name ||
@@ -41,13 +51,7 @@ export default function Laporan() {
       setOpen(true);
       return;
     } else {
-      await postForm(
-        data.name,
-        data.email,
-        data.judulLaporan,
-        data.deskripsiLaporan,
-        data.url
-      );
+      await postForm(forms);
       setOpens(true);
     }
   };
