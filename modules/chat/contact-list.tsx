@@ -15,7 +15,6 @@ export default function ContactList({
   formsFilter,
 }: contactprops) {
   const router = useRouter();
-  console.log(formsFilter);
   return (
     <main className="flex items-center relative flex-col">
       <section className="flex items-center w-full sticky top-0 mb-4">
