@@ -1,6 +1,7 @@
 import Typography from "@/components/core/typography";
 import { HiChatAlt2 } from "@/constant/icons";
 import useForm from "@/hooks/get-form-client";
+import Link from "next/link";
 
 export default function ChatKosong() {
   const { formsFilter } = useForm();
@@ -11,7 +12,12 @@ export default function ChatKosong() {
       {formsFilter.length > 0 ? (
         <Typography variant="small">Ketuk untuk memulai percakapan.</Typography>
       ) : (
-        <Typography variant="small">Anda belum mengajukan laporan</Typography>
+        <Typography variant="small">
+          Anda belum mengajukan laporan.{" "}
+          <Link href="/home/laporan" className="text-blue-500">
+            Ajukan Laporan
+          </Link>
+        </Typography>
       )}
     </main>
   );
