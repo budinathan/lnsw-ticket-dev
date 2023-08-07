@@ -163,7 +163,7 @@ export default function DropzoneInput({
                 >
                   <div className="flex  flex-col justify-center items-center my-20 space-y-2 text-center">
                     <PiUploadSimpleLight className="text-[5rem]" />
-                    <p>Drag or click to select images</p>
+                    <p>Drag or click to select PDF</p>
                     <p className="text-xs">{`${
                       maxFiles - (files?.length || 0)
                     } file(s) remaining`}</p>
