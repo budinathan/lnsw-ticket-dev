@@ -135,6 +135,7 @@ export default function DropzoneInput({
               readOnly={readOnly}
               file={file}
               deleteFile={deleteFile}
+              //@ts-ignore
               files={files}
               fileIndex={index}
             />
@@ -184,6 +185,7 @@ export default function DropzoneInput({
                       readOnly={readOnly}
                       file={file}
                       deleteFile={deleteFile}
+                      //@ts-ignore
                       files={files}
                       fileIndex={index}
                     />
