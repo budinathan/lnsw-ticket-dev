@@ -27,7 +27,6 @@ export default function LoginModule() {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     await loginUser(data.username, data.password);
     router.push("/home");
-    console.log({ data });
     return;
   };
   return (
