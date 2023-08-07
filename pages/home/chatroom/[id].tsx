@@ -8,7 +8,7 @@ import { GetServerSidePropsContext } from "next";
 export default function ChatroomId() {
   const { search, setSearch, formsFilter } = useForm();
   return (
-    <main className="h-[75vh] flex bg-white rounded-lg">
+    <main className="h-[80vh] flex bg-white rounded-lg">
       <Seo
         title="Chat Layanan LNSW"
         description="Cek progress layanan yang anda ajukan."

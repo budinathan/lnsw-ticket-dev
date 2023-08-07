@@ -8,8 +8,8 @@ export default function Breadcrumbs() {
   if (["/", "/register"].includes(pathname)) return "";
 
   return (
-    <main className="bg-white py-4">
-      <div className="max-w-7xl mx-auto flex gap-2 px-16 max-md:px-6">
+    <main className="bg-white py-4 sticky w-full max-w-7xl">
+      <div className="flex gap-2 px-16 max-md:px-6">
         {segments.map((segment, index) => {
           const currentSegment = segment === "[id]" ? "Chats" : segment;
 

@@ -30,7 +30,7 @@ export default function LoginModule() {
     return;
   };
   return (
-    <main className="screen">
+    <main className="screen ">
       <Seo
         title="Login Layanan LNSW"
         description="Login terlebih dahulu untuk menggunakan layanan LNSW!"

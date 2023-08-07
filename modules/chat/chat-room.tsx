@@ -39,7 +39,7 @@ export default function ChatRoom() {
           </div>
         </div>
       </section>
-      <section className="absolute bottom-5 w-full">
+      <section className="absolute bottom-0 w-full">
         <div className="flex relative items-center shadow-md">
           <input
             placeholder="Tuliskan pesan anda"
