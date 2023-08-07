@@ -99,7 +99,7 @@ export default function Laporan() {
             <DropzoneInput
               id="photo"
               label="Unggah bukti laporan"
-              accept={{ "application/*": ["pdf"] }}
+              accept={{ "application/pdf": ["pdf"] }}
             />
             <div className="flex justify-between max-sm:flex-col-reverse max-sm:gap-3">
               <ModalBalik>
