@@ -33,7 +33,7 @@ type TypographyProps<T extends React.ElementType> = {
 type TypographyComponent = <T extends React.ElementType = "p">(
   props: TypographyProps<T>
 ) => React.ReactElement | null;
-
+//@ts-ignore
 const Typography: TypographyComponent = React.forwardRef(
   <T extends React.ElementType = "p">(
     {
