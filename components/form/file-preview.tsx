@@ -36,7 +36,7 @@ export default function FilePreview({
     deleteFile?.(e, file);
   };
 
-  const imagesType = ["image/png", "image/jpg", "image/jpeg"];
+  const imagesType = ["application/pdf"];
 
   return imagesType.includes(file.type) ? (
     <>
