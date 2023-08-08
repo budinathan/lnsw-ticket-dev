@@ -1,11 +1,7 @@
 import { FileWithPreview } from "@/type/dropzone";
 import * as React from "react";
-import {
-  HiOutlineExternalLink,
-  HiOutlinePaperClip,
-  HiOutlinePhotograph,
-  HiX,
-} from "react-icons/hi";
+import { HiOutlineExternalLink, HiOutlinePaperClip, HiX } from "react-icons/hi";
+import { AiOutlineFile } from "react-icons/ai";
 
 type FilePreviewProps = {
   file: FileWithPreview;
@@ -45,7 +41,7 @@ export default function FilePreview({
         key={file.name}
       >
         <div className="flex w-0 flex-1 items-center">
-          <HiOutlinePhotograph
+          <AiOutlineFile
             className="h-5 w-5 flex-shrink-0 text-gray-400"
             aria-hidden="true"
           />
