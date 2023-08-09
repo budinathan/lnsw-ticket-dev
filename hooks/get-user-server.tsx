@@ -1,4 +1,6 @@
-//server
+//Type : Function
+//This file is used to run a function that returns the user state from server side.
+//If there is no token, the user will be redirected to the login page.
 
 import jwt from "jsonwebtoken";
 import { GetServerSidePropsContext } from "next";

@@ -1,3 +1,4 @@
+// Type : Custom hook for pagination
 import { useState } from "react";
 export default function handlePagination() {
   const [currentPage, setCurrentPage] = useState<number>(1);

@@ -1,4 +1,5 @@
-//client
+//Type : Function
+//This file is used to run a function that returns the chatforms state from client side.
 
 import { useEffect } from "react";
 import { useAppStore } from "@/lib/store";
