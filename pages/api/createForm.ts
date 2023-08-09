@@ -8,7 +8,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import prisma from "@/lib/prisma";
 import formidable from "formidable";
-// import savePhoto from "@/hooks/save-photo";
+// import savePhoto from "@/hooks/save-file";
 
 interface DecodedToken {
   id: number;
@@ -70,7 +70,7 @@ export default async function handleForm(
                 if ("err" in data) {
                   res.status(400).json({ message: "Error" });
                 } else {
-                  //  const photo = await savePhoto(req);
+                  // const photo = await savePhoto(req);
 
                   const Laporan = await prisma.ticket.create({
                     data: {
