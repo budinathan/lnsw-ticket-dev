@@ -1,3 +1,8 @@
+// Type : API
+//This file is used to delete a report.
+//It checks if the user is logged in and if the user have a token.
+//If the user is logged in and have a token it deletes the report from the database.
+//If the user is not logged in or don't have a token it sends an error message to the client.
 import { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import prisma from "@/lib/prisma";

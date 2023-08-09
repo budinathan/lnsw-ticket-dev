@@ -1,3 +1,9 @@
+// Type : API
+//This file is used to register a new user.
+//It checks if the username already exists and if not it creates a new user in the database.
+//If the username already exists it sends an error message to the client.
+//The client then displays the error message to the user.
+
 import prisma from "@/lib/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 import bcrypt from "bcrypt";

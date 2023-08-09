@@ -1,3 +1,8 @@
+// Type : API
+//This file is used to get a certain report of a user.
+//It checks if the user is logged in and if the user have a token.
+// It request a query id from the client and then it gets the report from the database where router id is tiketid.
+//If the user is logged in and have a token it gets the report of the user from the database.
 import { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import prisma from "@/lib/prisma";

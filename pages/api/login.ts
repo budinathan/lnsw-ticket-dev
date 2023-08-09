@@ -1,3 +1,13 @@
+//Type : API
+//This file is used to login a user.
+//It checks if the username exists and if the password is correct.
+//If the user is found and the password is correct it creates a JWT token and sends it to the client.
+//The client then stores the token in a cookie and uses it to authenticate the user.
+//If the user is not found or the password is incorrect it sends an error message to the client.
+//The client then displays the error message to the user.
+//The client also uses the token to get the username and id of the user.
+//This is used to display the username of the user on the client.
+
 import prisma from "@/lib/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 import bcrypt from "bcrypt";

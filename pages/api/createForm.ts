@@ -1,4 +1,10 @@
-import { NextApiRequest, NextApiResponse, NextApiHandler } from "next";
+// Type : API
+//This file is used to create a new report.
+//It checks if the user is logged in and if the user have a token.
+//If the user is logged in and have a token it creates a new report in the database.
+//If the user is not logged in or don't have a token it sends an error message to the client.
+
+import { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import prisma from "@/lib/prisma";
 import formidable from "formidable";
