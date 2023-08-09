@@ -1,3 +1,7 @@
+// Type : Form State Management
+// This file is used to manage the state of the form feature.
+// It has 1 states which is forms and 3 actions which postForm, getForm, and deleteForm.
+
 import { StateCreator } from "zustand";
 import axios from "axios";
 import { apiUrl } from "@/constant/env";

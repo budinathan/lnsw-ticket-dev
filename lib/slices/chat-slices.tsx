@@ -1,3 +1,7 @@
+//Type : Chat State Management
+//This file is used to manage the state of the chat feature.
+//It has 1 state which is chatforms and 1 action which is getById.
+
 import { StateCreator } from "zustand";
 import axios from "axios";
 import { apiUrl } from "@/constant/env";

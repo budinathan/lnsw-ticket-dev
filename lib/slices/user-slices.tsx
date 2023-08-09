@@ -1,3 +1,6 @@
+// Type: User State Management
+// This file is used to manage the state of the user feature.
+// It has 1 state which is users and 3 actions which registerUser, loginUser, and getUserInfo.
 import { StateCreator } from "zustand";
 import axios from "axios";
 import { apiUrl } from "@/constant/env";
