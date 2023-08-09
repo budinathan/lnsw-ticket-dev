@@ -1,3 +1,6 @@
+//Type : Prisma Client
+//This file is used to connect to the database.
+
 import { PrismaClient } from "@prisma/client";
 
 interface CustomNodeJsGlobal {

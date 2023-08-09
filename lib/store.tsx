@@ -1,3 +1,6 @@
+// Type : Zustand Store
+// This file is used to manage the state of the application.
+
 import { create } from "zustand";
 import { UserState, userSlice } from "./slices/user-slices";
 import { formSlice, FormState } from "./slices/form-slices";
