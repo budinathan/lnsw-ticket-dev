@@ -1,3 +1,5 @@
+// Type : Icons.
+
 import { BsMoon, BsFillTrashFill } from "react-icons/bs";
 import { LiaLanguageSolid } from "react-icons/lia";
 import {

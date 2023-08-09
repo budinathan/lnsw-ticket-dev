@@ -1,3 +1,5 @@
+//Type : Dashboard Constant
+
 const HomeNav = {
   dash: [
     {
