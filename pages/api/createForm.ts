@@ -82,7 +82,7 @@ export default async function handleForm(
                       tanggalpengajuan: formattedDate,
                       status: "Draft",
                       usersUserid: id,
-                      filepengajuan: data.fields.photo[0] as string,
+                      filepengajuan: data.fields.pdf as string,
                     },
                   });
                   return res.status(200).json({ Laporan });

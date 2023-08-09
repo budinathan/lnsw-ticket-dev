@@ -19,7 +19,7 @@ type Inputs = {
   judulLaporan: string;
   deskripsiLaporan: string;
   url: string;
-  photo: FileList;
+  pdf: FileList;
 };
 
 export default function Laporan() {
@@ -38,10 +38,10 @@ export default function Laporan() {
     forms.append("judulLaporan", data.judulLaporan);
     forms.append("deskripsiLaporan", data.deskripsiLaporan);
     forms.append("url", data.url);
-    if (data.photo && data.photo.length > 0) {
-      forms.append("photo", data.photo[0].name);
+    if (data.pdf && data.pdf.length > 0) {
+      forms.append("photo", data.pdf[0].name);
     }
-    console.log(data.photo[0]);
+    console.log(data.pdf[0].name);
     if (
       !data.email ||
       !data.name ||
@@ -97,9 +97,9 @@ export default function Laporan() {
               placeholder="Masukkan file URL"
             />
             <DropzoneInput
-              id="photo"
+              id="pdf"
               label="Unggah bukti laporan"
-              accept={{ "application/pdf": ["pdf"] }}
+              accept={{ "application/pdf": [".pdf"] }}
             />
             <div className="flex justify-between max-sm:flex-col-reverse max-sm:gap-3">
               <ModalBalik>
