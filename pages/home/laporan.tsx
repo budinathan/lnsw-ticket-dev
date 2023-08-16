@@ -12,6 +12,7 @@ import ModalSalah from "@/components/modals/modal-tidaklengkap-laporan";
 import DropzoneInput from "@/components/form/dropzone-input";
 import Typography from "@/components/core/typography";
 import Seo from "@/components/core/seo";
+import Lines from "@/components/others/lines";
 
 type Inputs = {
   name: string;
@@ -96,6 +97,7 @@ export default function Laporan() {
               label="URL"
               placeholder="Masukkan file URL"
             />
+            <Lines />
             <DropzoneInput
               id="pdf"
               label="Unggah bukti laporan"
