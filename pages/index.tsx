@@ -30,12 +30,12 @@ export default function LoginModule() {
     return;
   };
   return (
-    <main className="screen ">
+    <main className="screen">
       <Seo
         templateTitle="Login"
         description="Login terlebih dahulu untuk menggunakan layanan LNSW!"
       />
-      <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0 max-sm:relative max-sm:w-full">
+      <section className="bg-white p-5 rounded-xl shadow-xl w-[400px]  max-sm:relative max-sm:w-full">
         <Header />
         <form onSubmit={handleSubmit(onSubmit)} className="mt-2 mb-4">
           <FormProvider {...methods}>
