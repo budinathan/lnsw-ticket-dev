@@ -32,7 +32,7 @@ export default function LoginModule() {
   return (
     <main className="screen ">
       <Seo
-        title="Login Layanan LNSW"
+        templateTitle="Login"
         description="Login terlebih dahulu untuk menggunakan layanan LNSW!"
       />
       <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0 max-sm:relative max-sm:w-full">

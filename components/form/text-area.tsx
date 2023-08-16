@@ -43,7 +43,9 @@ export default function TextArea({
           id={id}
           readOnly={readOnly}
           disabled={disabled}
-          className={clsx("p-4 rounded-md bg-[#d9d9d9] w-full mt-2 text-sm")}
+          className={clsx(
+            "p-4 rounded-md bg-[#EAEBEC] w-full mt-2 text-sm border-black border-[0.5px]"
+          )}
           placeholder={placeholder}
           aria-describedby={id}
         />

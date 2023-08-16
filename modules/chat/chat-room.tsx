@@ -10,7 +10,7 @@ export default function ChatRoom() {
 
   return (
     <main className="relative h-[75vh]">
-      <section className="bg-greybg p-2 rounded-md flex justify-between shadow-md sticky top-0">
+      <section className="bg-[#EAEBEC] p-2 rounded-md flex justify-between shadow-md sticky top-0">
         <div>
           <Typography variant="largebold">{chatforms?.rows?.jenis}</Typography>
           <Typography variant="small">
@@ -43,7 +43,7 @@ export default function ChatRoom() {
         <div className="flex relative items-center shadow-md">
           <input
             placeholder="Tuliskan pesan anda"
-            className={`bg-greybg rounded-md px-2 py-3 w-full text-sm ${
+            className={`bg-[#EAEBEC]  rounded-md px-2 py-3 w-full text-sm ${
               chatforms?.rows?.status === "Selesai" ? "cursor-not-allowed" : ""
             }`}
             disabled={chatforms?.rows?.status === "Selesai"}

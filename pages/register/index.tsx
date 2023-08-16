@@ -32,7 +32,7 @@ export default function RegisterModule() {
   return (
     <main className="screen">
       <Seo
-        title="Registrasi Akun Layanan LNSW"
+        templateTitle="Registrasi Akun"
         description="Registrasi Akun terlebih dahulu untuk menggunakan layanan LNSW!"
       />
       <section className="bg-white p-5 rounded-xl shadow-xl w-[400px] absolute top-0 max-sm:relative max-sm:w-full">

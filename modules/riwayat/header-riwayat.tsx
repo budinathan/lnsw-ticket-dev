@@ -23,7 +23,7 @@ export default function HeaderRiwayat({
         <div className="flex items-center">
           <input
             placeholder="Search"
-            className="bg-greybg p-1 rounded-md text-sm"
+            className="bg-[#EAEBEC]  p-1 rounded-md text-sm"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

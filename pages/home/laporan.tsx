@@ -59,7 +59,7 @@ export default function Laporan() {
   return (
     <main>
       <Seo
-        title="Laporan Layanan LNSW"
+        templateTitle="Pengajuan Laporan"
         description="Isi form untuk mengajukan layanan kepada LNSW."
       />
       <Typography variant="largebold">Formulir Laporan</Typography>

@@ -1,6 +1,6 @@
 // Type : Icons.
 
-import { BsMoon, BsFillTrashFill } from "react-icons/bs";
+import { BsMoon, BsFillTrashFill, BsChevronDown } from "react-icons/bs";
 import { LiaLanguageSolid } from "react-icons/lia";
 import {
   BiSolidUser,
@@ -40,4 +40,5 @@ export {
   AiFillMinusCircle,
   GoPaperAirplane,
   HiChatAlt2,
+  BsChevronDown,
 };

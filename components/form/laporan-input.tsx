@@ -44,7 +44,9 @@ export default function UsernameInput({
           id={id}
           readOnly={readOnly}
           disabled={disabled}
-          className={clsx("p-4 rounded-md bg-[#d9d9d9] w-full mt-2 text-sm")}
+          className={clsx(
+            "p-4 rounded-md bg-[#EAEBEC] w-full mt-2 text-sm border-[0.5px] border-black"
+          )}
           style={{ borderRadius: "6px 6px 6px 6px" }}
           placeholder={placeholder}
           aria-describedby={id}

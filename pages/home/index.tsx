@@ -9,7 +9,7 @@ export default function Home({ user }: { user: User }) {
   return (
     <main className="h-screen">
       <Seo
-        title="Home Layanan LNSW"
+        templateTitle="Home"
         description="Riwayat pengajuan, Pengajuan, dan Chatroom."
       />
       <section>

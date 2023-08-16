@@ -156,7 +156,7 @@ export default function DropzoneInput({
                 <input {...getInputProps()} />
                 <div
                   className={clsx(
-                    "w-full p-2 bg-[#d9d9d9]  rounded-md cursor-pointer",
+                    "w-full p-2 bg-[#EAEBEC] border-[0.5px] border-black rounded-md cursor-pointer",
                     errors[id]
                       ? "border-danger-500 group-focus:border-danger-500"
                       : "group-focus:border-primary-500"

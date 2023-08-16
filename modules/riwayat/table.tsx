@@ -3,6 +3,7 @@ import ButtonsRiwayat from "./buttons-riwayat";
 import handlePagination from "@/hooks/pagination";
 import Pagination from "./pagination";
 import Typography from "@/components/core/typography";
+import { BsChevronDown } from "@/constant/icons";
 
 export default function Table({ formsFilter }: { formsFilter: Form["rows"] }) {
   const {
@@ -26,8 +27,9 @@ export default function Table({ formsFilter }: { formsFilter: Form["rows"] }) {
             <th>
               <Typography variant="smallbold">Judul Laporan</Typography>
             </th>
-            <th>
+            <th className="flex gap-1 items-center justify-center mt-2">
               <Typography variant="smallbold">No.Antrian</Typography>
+              <BsChevronDown />
             </th>
             <th>
               <Typography variant="smallbold">Status Terkini</Typography>
@@ -41,7 +43,7 @@ export default function Table({ formsFilter }: { formsFilter: Form["rows"] }) {
         <tbody className=" text-center">
           {currentItems?.map((item: any, index: any) => {
             return (
-              <tr className="bg-[#D1D5DA]" key={index}>
+              <tr className="bg-[#E3EAF4]" key={index}>
                 <td className="p-2 rounded-l-lg ">
                   <Typography variant="small">
                     {indexOfFirstItem + index + 1}

@@ -20,7 +20,7 @@ export default function ContactList({
       <section className="flex items-center w-full sticky top-0 mb-4">
         <input
           placeholder="Search"
-          className="bg-greybg p-2 w-full rounded-md text-sm"
+          className="bg-[#EAEBEC] p-2 w-full rounded-md text-sm"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -33,7 +33,7 @@ export default function ContactList({
               key={index}
               className={`mb-2 px-4 py-2 rounded-md w-full ${
                 router.asPath === `/home/chatroom/${item?.tiketid}`
-                  ? "bg-[#CBCDD1]"
+                  ? "bg-[#EAEBEC] border-[0.5px] border-black"
                   : ""
               }`}
             >

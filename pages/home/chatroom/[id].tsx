@@ -10,7 +10,7 @@ export default function ChatroomId() {
   return (
     <main className="h-[80vh] flex bg-white rounded-lg">
       <Seo
-        title="Chat Layanan LNSW"
+        templateTitle="Chat"
         description="Cek progress layanan yang anda ajukan."
       />
       <section className=" border-opacity-25  w-1/3  mx-2 p-2 overflow-auto max-sm:hidden">

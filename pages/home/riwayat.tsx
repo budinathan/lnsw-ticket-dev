@@ -10,7 +10,7 @@ export default function Riwayat() {
   return (
     <main className="h-screen translate-y-[35px]">
       <Seo
-        title="Riwayat Layanan LNSW"
+        templateTitle="Riwayat"
         description="Riwayat layanan LNSW akun anda."
       />
       <section className="bg-white p-10 rounded-lg w-full max-sm:overflow-auto max-sm:p-7">
