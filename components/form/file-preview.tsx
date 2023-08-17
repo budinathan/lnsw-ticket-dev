@@ -37,7 +37,7 @@ export default function FilePreview({
   return imagesType.includes(file.type) ? (
     <>
       <li
-        className="flex min-h-[2.25rem] mb-2 bg-[#d9d9d9] items-center justify-between py-0 pl-3 pr-4 text-sm "
+        className="flex min-h-[2.25rem] mb-2 bg-[#EAEBEC] rounded-md border-[0.5px] border-black shadow-sm items-center justify-between py-0 pl-3 pr-4 text-sm "
         key={file.name}
       >
         <div className="flex w-0 flex-1 items-center">

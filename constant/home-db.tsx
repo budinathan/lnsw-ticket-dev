@@ -4,19 +4,19 @@ const HomeNav = {
   dash: [
     {
       title: "Riwayat Pengajuan",
-      desc: "Manage your account settings and set e-mail preferences",
+      desc: "Periksa riwayat pengajuan layanan anda.",
       link: "home/riwayat",
       linkText: "Lihat Riwayat  Pengajuan",
     },
     {
       title: "Pengajuan",
-      desc: "Manage your account settings and set e-mail preferences",
+      desc: "Ajukan permohonan layanan anda.",
       link: "home/laporan",
       linkText: "Ajukan laporan",
     },
     {
       title: "Chatroom",
-      desc: "Manage your account settings and set e-mail preferences",
+      desc: "Periksa kemajuan layanan anda dengan agent.",
       link: "home/chatroom",
       linkText: "Cek chatroom",
     },
