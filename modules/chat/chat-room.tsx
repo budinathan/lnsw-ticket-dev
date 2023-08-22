@@ -40,16 +40,25 @@ export default function ChatRoom() {
         </div>
       </section>
       <section className="absolute bottom-0 w-full">
-        <div className="flex relative items-center shadow-md">
-          <input
-            placeholder="Tuliskan pesan anda"
-            className={`bg-[#EAEBEC]  rounded-md px-2 py-3 w-full text-sm ${
-              chatforms?.rows?.status === "Selesai" ? "cursor-not-allowed" : ""
-            }`}
-            disabled={chatforms?.rows?.status === "Selesai"}
-          />
-          <GoPaperAirplane className="absolute right-2 opacity-50 focus:outline-none" />
-        </div>
+        {chatforms?.rows?.status === "Selesai" ? (
+          <div className="border-t-[3px] border-greybg py-3 text-center">
+            <Typography variant="small">
+              Anda sudah tidak bergabung dengan obrolan.
+            </Typography>
+          </div>
+        ) : (
+          <div className="flex relative items-center shadow-md">
+            <input
+              placeholder="Tuliskan pesan anda"
+              className={`bg-[#EAEBEC]  rounded-md px-2 py-3 w-full text-sm ${
+                chatforms?.rows?.status === "Selesai"
+                  ? "cursor-not-allowed"
+                  : ""
+              }`}
+            />
+            <GoPaperAirplane className="absolute right-2 opacity-50 focus:outline-none" />
+          </div>
+        )}
       </section>
     </main>
   );
