@@ -1,13 +1,12 @@
+import * as React from "react";
 import { HiUserCircle, IoNotificationsOutline } from "@/constant/icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import LogoutPopover from "../popover/logout-popover";
 export default function Navbar() {
   const router = useRouter();
   if (router.pathname === "/" || router.pathname === "/register") {
     return null;
   }
-
   return (
     <main className="flex justify-between text-white bg-bluebg py-2 z-[100] px-12 rounded-sm shadow-lg sticky top-0 max-md:px-6">
       <Link href="/home">
@@ -17,7 +16,6 @@ export default function Navbar() {
         <IoNotificationsOutline className="text-2xl text-greybg" />
         <div className="flex flex-col items-center ">
           <HiUserCircle className="text-2xl text-greybg" />
-          <LogoutPopover />
         </div>
       </div>
     </main>
