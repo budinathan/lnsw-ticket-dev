@@ -16,6 +16,7 @@ export interface UserState {
   registerUser: (username: string, password: string) => Promise<void>;
   loginUser: (username: string, password: string) => Promise<void>;
   getUserInfo: () => void;
+  logout: () => void;
   errorMessage?: string;
   errorMessageRegister?: string;
 }
@@ -23,6 +24,9 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
   users: null,
   errorMessage: "",
   errorMessageRegister: "",
+  logout: async () => {
+    await axios.post(`${apiUrl}/logout`);
+  },
   registerUser: async (username: string, password: string) => {
     try {
       set({ errorMessageRegister: "" });
