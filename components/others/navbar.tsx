@@ -1,6 +1,7 @@
 import { HiUserCircle, IoNotificationsOutline } from "@/constant/icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import LogoutPopover from "../popover/logout-popover";
 export default function Navbar() {
   const router = useRouter();
   if (router.pathname === "/" || router.pathname === "/register") {
@@ -16,6 +17,7 @@ export default function Navbar() {
         <IoNotificationsOutline className="text-2xl text-greybg" />
         <div className="flex flex-col items-center ">
           <HiUserCircle className="text-2xl text-greybg" />
+          <LogoutPopover />
         </div>
       </div>
     </main>
