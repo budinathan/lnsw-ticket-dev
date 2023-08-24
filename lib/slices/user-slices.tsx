@@ -25,6 +25,7 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
   errorMessageRegister: "",
   registerUser: async (username: string, password: string) => {
     try {
+      set({ errorMessageRegister: "" });
       await axios.post(`${apiUrl}/register`, {
         username,
         password,
@@ -35,6 +36,7 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
   },
   loginUser: async (username: string, password: string) => {
     try {
+      set({ errorMessage: "" });
       await axios.post(`${apiUrl}/login`, {
         username,
         password,
