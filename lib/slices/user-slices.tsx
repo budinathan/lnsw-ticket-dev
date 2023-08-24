@@ -16,9 +16,11 @@ export interface UserState {
   registerUser: (username: string, password: string) => Promise<void>;
   loginUser: (username: string, password: string) => Promise<void>;
   getUserInfo: () => void;
+  errorMessage?: string;
 }
 export const userSlice: StateCreator<UserState> = (set, get) => ({
   users: null,
+  errorMessage: "",
   registerUser: async (username: string, password: string) => {
     try {
       await axios.post(`${apiUrl}/register`, {
@@ -35,8 +37,8 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
         username,
         password,
       });
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
+      set({ errorMessage: err.response.data.message });
     }
   },
   getUserInfo: async () => {

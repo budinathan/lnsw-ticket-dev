@@ -10,6 +10,7 @@ import UsernameInput from "@/components/form/username-input";
 import Seo from "@/components/core/seo";
 import { redirectUser } from "@/hooks/redirect-user";
 import { GetServerSidePropsContext } from "next";
+import ModalErrorLogin from "@/components/modals/modal-error-login";
 
 type Inputs = {
   username: string;
@@ -17,7 +18,7 @@ type Inputs = {
 };
 
 export default function LoginModule() {
-  const { loginUser } = useAppStore();
+  const { loginUser, errorMessage } = useAppStore();
   const router = useRouter();
 
   const methods = useForm<Inputs>({
@@ -61,6 +62,7 @@ export default function LoginModule() {
         </form>
         <Footer />
       </section>
+      {errorMessage && <ModalErrorLogin errorMessage={errorMessage} />}
     </main>
   );
 }
