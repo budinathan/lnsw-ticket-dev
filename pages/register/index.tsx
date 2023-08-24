@@ -3,7 +3,6 @@ import Button from "@/components/core/button";
 import Footer from "@/modules/register/register-footer";
 import InfoRegister from "@/modules/register/info";
 import Header from "@/modules/register/register-Header";
-import { useRouter } from "next/router";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import PasswordInput from "@/components/form/password-input";
 import UsernameInput from "@/components/form/username-input";
@@ -19,15 +18,12 @@ type Inputs = {
 
 export default function RegisterModule() {
   const { registerUser, errorMessageRegister } = useAppStore();
-  const router = useRouter();
   const methods = useForm<Inputs>({
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     await registerUser(data.username, data.password);
-    router.push("/");
-    console.log({ data });
     return;
   };
   return (
