@@ -10,6 +10,7 @@ import UsernameInput from "@/components/form/username-input";
 import Seo from "@/components/core/seo";
 import { GetServerSidePropsContext } from "next";
 import { redirectUser } from "@/hooks/redirect-user";
+import ModalErrorRegister from "@/components/modals/modal-error-register";
 
 type Inputs = {
   username: string;
@@ -17,7 +18,7 @@ type Inputs = {
 };
 
 export default function RegisterModule() {
-  const { registerUser } = useAppStore();
+  const { registerUser, errorMessageRegister } = useAppStore();
   const router = useRouter();
   const methods = useForm<Inputs>({
     mode: "onTouched",
@@ -60,6 +61,9 @@ export default function RegisterModule() {
           </FormProvider>
         </form>
         <Footer />
+        {errorMessageRegister && (
+          <ModalErrorRegister errorMessageRegister={errorMessageRegister} />
+        )}
       </section>
     </main>
   );

@@ -17,18 +17,20 @@ export interface UserState {
   loginUser: (username: string, password: string) => Promise<void>;
   getUserInfo: () => void;
   errorMessage?: string;
+  errorMessageRegister?: string;
 }
 export const userSlice: StateCreator<UserState> = (set, get) => ({
   users: null,
   errorMessage: "",
+  errorMessageRegister: "",
   registerUser: async (username: string, password: string) => {
     try {
       await axios.post(`${apiUrl}/register`, {
         username,
         password,
       });
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
+      set({ errorMessageRegister: err.response.data.message });
     }
   },
   loginUser: async (username: string, password: string) => {
