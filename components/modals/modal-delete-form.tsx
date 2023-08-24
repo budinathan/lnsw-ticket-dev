@@ -35,9 +35,9 @@ export default function ModalDeleteForm({
             <PiWarningFill />
           </div>
           <Typography variant="largebold">Hapus Laporan?</Typography>
-          <Typography variant="small" className="text-center">
-            {judul} akan dihapus, Anda yakin?
-          </Typography>
+          <p className="text-center text-xs font-weight-400 font-barlow ">
+            Laporan <strong>{judul}</strong> akan dihapus, Anda yakin?
+          </p>
         </Modal.Section>
         <Modal.Section>
           <div className="flex  justify-center gap-2">
