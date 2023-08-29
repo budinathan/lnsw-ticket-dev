@@ -7,12 +7,13 @@ import NavHome from "@/modules/home/nav";
 import { GetServerSidePropsContext } from "next";
 
 import Head from "@/components/others/header";
+import Layout from "@/components/core/layout";
 
 export default function Home({ user }: { user: User }) {
   return (
     <>
       <Head />
-      <main className="h-screen py-6 max-md:py-3 px-16 max-md:px-6">
+      <Layout className="h-screen">
         <Seo
           templateTitle="Home"
           description="Riwayat pengajuan, Pengajuan, dan Chatroom."
@@ -23,7 +24,7 @@ export default function Home({ user }: { user: User }) {
         <section className="grid grid-cols-3 gap-5 mt-5 max-md:grid-cols-2 max-sm:grid-cols-1">
           <NavHome />
         </section>
-      </main>
+      </Layout>
     </>
   );
 }

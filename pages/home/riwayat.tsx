@@ -1,3 +1,4 @@
+import Layout from "@/components/core/layout";
 import Seo from "@/components/core/seo";
 import Head from "@/components/others/header";
 import useForm from "@/hooks/get-form-client";
@@ -11,7 +12,7 @@ export default function Riwayat() {
   return (
     <>
       <Head />
-      <main className="h-screen translate-y-[35px] py-6 max-md:py-3 px-16 max-md:px-6">
+      <Layout className="h-screen translate-y-[35px]">
         <Seo
           templateTitle="Riwayat"
           description="Riwayat layanan LNSW akun anda."
@@ -20,7 +21,7 @@ export default function Riwayat() {
           <HeaderRiwayat search={search} setSearch={setSearch} />
           <Table formsFilter={formsFilter} />
         </section>
-      </main>
+      </Layout>
     </>
   );
 }

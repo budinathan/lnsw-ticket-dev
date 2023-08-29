@@ -14,6 +14,7 @@ import Typography from "@/components/core/typography";
 import Seo from "@/components/core/seo";
 import Lines from "@/components/others/lines";
 import Head from "@/components/others/header";
+import Layout from "@/components/core/layout";
 
 type Inputs = {
   name: string;
@@ -61,7 +62,7 @@ export default function Laporan() {
   return (
     <>
       <Head />
-      <main className="py-6 max-md:py-3 px-16 max-md:px-6">
+      <Layout>
         <Seo
           templateTitle="Pengajuan Laporan"
           description="Isi form untuk mengajukan layanan kepada LNSW."
@@ -134,7 +135,7 @@ export default function Laporan() {
         </section>
         {opens && <ModalBerhasil />}
         {open && <ModalSalah />}
-      </main>
+      </Layout>
     </>
   );
 }

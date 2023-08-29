@@ -1,3 +1,4 @@
+import Layout from "@/components/core/layout";
 import Seo from "@/components/core/seo";
 import Head from "@/components/others/header";
 import useForm from "@/hooks/get-form-client";
@@ -11,7 +12,7 @@ export default function ChatroomId() {
   return (
     <>
       <Head />
-      <main className="h-[80vh] flex bg-[#fbfbfb] rounded-lg py-6 max-md:py-3 px-16 max-md:px-6">
+      <Layout className="h-[80vh] flex bg-[#fbfbfb] rounded-lg">
         <Seo
           templateTitle="Chat"
           description="Cek progress layanan yang anda ajukan."
@@ -27,7 +28,7 @@ export default function ChatroomId() {
         <section className="w-2/3 mx-2 relative overflow-auto max-sm:w-full p-2">
           <ChatRoom />
         </section>
-      </main>
+      </Layout>
     </>
   );
 }

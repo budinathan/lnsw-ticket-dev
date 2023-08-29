@@ -11,6 +11,7 @@ import Seo from "@/components/core/seo";
 import { redirectUser } from "@/hooks/redirect-user";
 import { GetServerSidePropsContext } from "next";
 import ModalErrorLogin from "@/components/modals/modal-error-login";
+import Layout from "@/components/core/layout";
 
 type Inputs = {
   username: string;
@@ -31,7 +32,7 @@ export default function LoginModule() {
     return;
   };
   return (
-    <main className="screen py-6 max-md:py-3 px-16 max-md:px-6">
+    <Layout className="screen">
       <Seo
         templateTitle="Login"
         description="Login terlebih dahulu untuk menggunakan layanan LNSW!"
@@ -63,7 +64,7 @@ export default function LoginModule() {
         <Footer />
       </section>
       {errorMessage && <ModalErrorLogin errorMessage={errorMessage} />}
-    </main>
+    </Layout>
   );
 }
 

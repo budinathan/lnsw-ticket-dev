@@ -10,6 +10,7 @@ import Seo from "@/components/core/seo";
 import { GetServerSidePropsContext } from "next";
 import { redirectUser } from "@/hooks/redirect-user";
 import ModalErrorRegister from "@/components/modals/modal-error-register";
+import Layout from "@/components/core/layout";
 
 type Inputs = {
   username: string;
@@ -27,7 +28,7 @@ export default function RegisterModule() {
     return;
   };
   return (
-    <main className="screen py-6 max-md:py-3 px-16 max-md:px-6">
+    <Layout className="screen">
       <Seo
         templateTitle="Registrasi Akun"
         description="Registrasi Akun terlebih dahulu untuk menggunakan layanan LNSW!"
@@ -61,7 +62,7 @@ export default function RegisterModule() {
           <ModalErrorRegister errorMessageRegister={errorMessageRegister} />
         )}
       </section>
-    </main>
+    </Layout>
   );
 }
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
