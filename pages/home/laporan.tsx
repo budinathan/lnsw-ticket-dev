@@ -13,6 +13,7 @@ import DropzoneInput from "@/components/form/dropzone-input";
 import Typography from "@/components/core/typography";
 import Seo from "@/components/core/seo";
 import Lines from "@/components/others/lines";
+import Head from "@/components/others/header";
 
 type Inputs = {
   name: string;
@@ -58,80 +59,83 @@ export default function Laporan() {
   };
 
   return (
-    <main>
-      <Seo
-        templateTitle="Pengajuan Laporan"
-        description="Isi form untuk mengajukan layanan kepada LNSW."
-      />
-      <Typography variant="largebold">Formulir Laporan</Typography>
-      <section className="bg-white rounded-md shadow-md">
-        <form onSubmit={handleSubmit(onSubmit)} className="form">
-          <FormProvider {...methods}>
-            <LaporanInput
-              id="name"
-              label="Nama"
-              placeholder="Masukkan nama anda"
-              required
-            />
-            <LaporanInput
-              id="email"
-              label="Email"
-              placeholder="Masukkan email anda"
-              type="email"
-              required
-            />
-            <LaporanInput
-              id="judulLaporan"
-              label="Judul Laporan"
-              placeholder="Tuliskan inti dari laporan anda"
-              required
-            />
-            <TextArea
-              id="deskripsiLaporan"
-              label="Deskripsi Laporan"
-              placeholder="Tuliskan laporan anda"
-              required
-            />
-            <LaporanInput
-              id="url"
-              label="URL"
-              placeholder="Masukkan file URL"
-            />
-            <Lines />
-            <DropzoneInput
-              id="pdf"
-              label="Unggah bukti laporan"
-              accept={{ "application/pdf": [".pdf"] }}
-            />
-            <div className="flex justify-between max-sm:flex-col-reverse max-sm:gap-3">
-              <ModalBalik>
-                {({ openModal }) => (
-                  <Button
-                    onClick={openModal}
-                    variant="default"
-                    size="submit"
-                    type="button"
-                    className="max-sm:w-full"
-                  >
-                    Balik
-                  </Button>
-                )}
-              </ModalBalik>
-              <Button
-                variant="default"
-                size="submit"
-                type="submit"
-                className="max-sm:w-full"
-              >
-                Submit Laporan
-              </Button>
-            </div>
-          </FormProvider>
-        </form>
-      </section>
-      {opens && <ModalBerhasil />}
-      {open && <ModalSalah />}
-    </main>
+    <>
+      <Head />
+      <main className="py-6 max-md:py-3 px-16 max-md:px-6">
+        <Seo
+          templateTitle="Pengajuan Laporan"
+          description="Isi form untuk mengajukan layanan kepada LNSW."
+        />
+        <Typography variant="largebold">Formulir Laporan</Typography>
+        <section className="bg-white rounded-md shadow-md">
+          <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <FormProvider {...methods}>
+              <LaporanInput
+                id="name"
+                label="Nama"
+                placeholder="Masukkan nama anda"
+                required
+              />
+              <LaporanInput
+                id="email"
+                label="Email"
+                placeholder="Masukkan email anda"
+                type="email"
+                required
+              />
+              <LaporanInput
+                id="judulLaporan"
+                label="Judul Laporan"
+                placeholder="Tuliskan inti dari laporan anda"
+                required
+              />
+              <TextArea
+                id="deskripsiLaporan"
+                label="Deskripsi Laporan"
+                placeholder="Tuliskan laporan anda"
+                required
+              />
+              <LaporanInput
+                id="url"
+                label="URL"
+                placeholder="Masukkan file URL"
+              />
+              <Lines />
+              <DropzoneInput
+                id="pdf"
+                label="Unggah bukti laporan"
+                accept={{ "application/pdf": [".pdf"] }}
+              />
+              <div className="flex justify-between max-sm:flex-col-reverse max-sm:gap-3">
+                <ModalBalik>
+                  {({ openModal }) => (
+                    <Button
+                      onClick={openModal}
+                      variant="default"
+                      size="submit"
+                      type="button"
+                      className="max-sm:w-full"
+                    >
+                      Balik
+                    </Button>
+                  )}
+                </ModalBalik>
+                <Button
+                  variant="default"
+                  size="submit"
+                  type="submit"
+                  className="max-sm:w-full"
+                >
+                  Submit Laporan
+                </Button>
+              </div>
+            </FormProvider>
+          </form>
+        </section>
+        {opens && <ModalBerhasil />}
+        {open && <ModalSalah />}
+      </main>
+    </>
   );
 }
 

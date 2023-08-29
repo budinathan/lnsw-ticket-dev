@@ -9,6 +9,7 @@ import { GetServerSidePropsContext } from "next";
 import { useRouter } from "next/router";
 import Button from "@/components/core/button";
 import { useAppStore } from "@/lib/store";
+import Head from "@/components/others/header";
 
 export default function Home({ user }: { user: User }) {
   const router = useRouter();
@@ -18,23 +19,26 @@ export default function Home({ user }: { user: User }) {
     router.push("/");
   }
   return (
-    <main className="h-screen">
-      <Seo
-        templateTitle="Home"
-        description="Riwayat pengajuan, Pengajuan, dan Chatroom."
-      />
-      <section className="flex justify-between">
-        <Typography variant="large">Welcome, {user?.username}</Typography>
-        <div className="-translate-y-[58px]">
-          <Button variant="default" size="default" onClick={logoutUser}>
-            Logout
-          </Button>
-        </div>
-      </section>
-      <section className="grid grid-cols-3 gap-5 mt-5 max-md:grid-cols-2 max-sm:grid-cols-1">
-        <NavHome />
-      </section>
-    </main>
+    <>
+      <Head />
+      <main className="h-screen py-6 max-md:py-3 px-16 max-md:px-6">
+        <Seo
+          templateTitle="Home"
+          description="Riwayat pengajuan, Pengajuan, dan Chatroom."
+        />
+        <section className="flex justify-between">
+          <Typography variant="large">Welcome, {user?.username}</Typography>
+          {/* <div className="-translate-y-[58px]">
+            <Button variant="default" size="default" onClick={logoutUser}>
+              Logout
+            </Button>
+          </div> */}
+        </section>
+        <section className="grid grid-cols-3 gap-5 mt-5 max-md:grid-cols-2 max-sm:grid-cols-1">
+          <NavHome />
+        </section>
+      </main>
+    </>
   );
 }
 

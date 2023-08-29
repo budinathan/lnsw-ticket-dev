@@ -14,9 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
           height={2}
           showOnShallow={true}
         />
-        <Navbar />
-        <Breadcrumbs />
-        <section className="px-16 py-5 max-md:px-6 max-md:py-3">
+        {/* <Navbar /> */}
+        {/* <Breadcrumbs /> */}
+        <section className="">
           <Component {...pageProps} />
         </section>
       </main>
