@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { HiUserCircle } from "react-icons/hi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import Breadcrumbs from "../core/breadcrumbs";
+
+import PopoverIcon from "../popover/popoverContent";
 
 export default function Head() {
   return (
@@ -11,14 +12,12 @@ export default function Head() {
           <img
             src="/logoLNSW.png"
             alt="logo lnsw"
-            className="h-[45px] max-md:h-[40px]"
+            className="h-[40px] max-md:h-[35px]"
           />
         </Link>
         <div className="flex items-center gap-[26px]">
-          <IoNotificationsOutline className="text-2xl text-greybg" />
-          <div className="flex flex-col items-center ">
-            <HiUserCircle className="text-2xl text-greybg" />
-          </div>
+          <IoNotificationsOutline />
+          <PopoverIcon />
         </div>
       </section>
       <Breadcrumbs />

@@ -6,18 +6,9 @@ import { User } from "@/lib/slices/user-slices";
 import NavHome from "@/modules/home/nav";
 import { GetServerSidePropsContext } from "next";
 
-import { useRouter } from "next/router";
-import Button from "@/components/core/button";
-import { useAppStore } from "@/lib/store";
 import Head from "@/components/others/header";
 
 export default function Home({ user }: { user: User }) {
-  const router = useRouter();
-  const { logout } = useAppStore();
-  async function logoutUser() {
-    await logout();
-    router.push("/");
-  }
   return (
     <>
       <Head />
@@ -28,11 +19,6 @@ export default function Home({ user }: { user: User }) {
         />
         <section className="flex justify-between">
           <Typography variant="large">Welcome, {user?.username}</Typography>
-          {/* <div className="-translate-y-[58px]">
-            <Button variant="default" size="default" onClick={logoutUser}>
-              Logout
-            </Button>
-          </div> */}
         </section>
         <section className="grid grid-cols-3 gap-5 mt-5 max-md:grid-cols-2 max-sm:grid-cols-1">
           <NavHome />
