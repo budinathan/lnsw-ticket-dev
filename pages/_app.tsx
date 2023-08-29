@@ -1,5 +1,3 @@
-import Breadcrumbs from "@/components/core/breadcrumbs";
-import Navbar from "@/components/others/navbar";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
@@ -14,8 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
           height={2}
           showOnShallow={true}
         />
-        {/* <Navbar /> */}
-        {/* <Breadcrumbs /> */}
         <section className="">
           <Component {...pageProps} />
         </section>
