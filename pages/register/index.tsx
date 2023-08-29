@@ -27,7 +27,7 @@ export default function RegisterModule() {
     return;
   };
   return (
-    <main className="screen">
+    <main className="screen py-6 max-md:py-3 px-16 max-md:px-6">
       <Seo
         templateTitle="Registrasi Akun"
         description="Registrasi Akun terlebih dahulu untuk menggunakan layanan LNSW!"

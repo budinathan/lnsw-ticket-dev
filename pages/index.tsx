@@ -31,7 +31,7 @@ export default function LoginModule() {
     return;
   };
   return (
-    <main className="screen">
+    <main className="screen py-6 max-md:py-3 px-16 max-md:px-6">
       <Seo
         templateTitle="Login"
         description="Login terlebih dahulu untuk menggunakan layanan LNSW!"
