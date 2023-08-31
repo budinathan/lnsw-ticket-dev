@@ -5,8 +5,8 @@ import { Accept, useDropzone } from "react-dropzone";
 import { Controller, useFormContext } from "react-hook-form";
 import FilePreview from "./file-preview";
 import { FileWithPreview } from "@/type/dropzone";
-import { PiUploadSimpleLight } from "@/constant/icons";
 import Typography from "../core/typography";
+import { LiaFileUploadSolid } from "react-icons/lia";
 
 type DropzoneInputProps = {
   accept?: Accept;
@@ -163,11 +163,13 @@ export default function DropzoneInput({
                   )}
                 >
                   <div className="flex  flex-col justify-center items-center my-20 space-y-2 text-center">
-                    <PiUploadSimpleLight className="text-[5rem]" />
-                    <p>Drag or click to select PDF</p>
-                    <p className="text-xs">{`${
-                      maxFiles - (files?.length || 0)
-                    } file(s) remaining`}</p>
+                    <LiaFileUploadSolid className="text-[5rem]" />
+                    <p className="bg-bluebg text-white px-5 py-1 rounded-md">
+                      Unggah file bukti laporan
+                    </p>
+                    <p className="text-xs">
+                      Atau lakukan drag and drop file yang ingin diunggah
+                    </p>
                   </div>
                 </div>
               </div>
