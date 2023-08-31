@@ -29,10 +29,7 @@ export default function InfoPopover({
           ])}
         />
       </PopoverTrigger>
-      <PopoverContent
-        side="top"
-        className={cn(["w-60 p-2", classNames?.content])}
-      >
+      <PopoverContent side="top" className={cn(["w-60", classNames?.content])}>
         {children}
       </PopoverContent>
     </Popover>

@@ -1,5 +1,7 @@
 import * as React from "react";
 import { RiAccountCircleFill } from "react-icons/ri";
+import { CiLogout } from "react-icons/ci";
+
 import {
   Popover,
   PopoverContent,
@@ -10,6 +12,7 @@ import IconButton from "../core/icon-button";
 
 import { useRouter } from "next/router";
 import { useAppStore } from "@/lib/store";
+import clsx from "clsx";
 
 type ExamplePopoverProps = ExtractProps<typeof Popover>;
 
@@ -34,8 +37,13 @@ export default function PopoverIcon({ ...rest }: ExamplePopoverProps) {
         <div className="flex justify-center">
           <button
             onClick={logoutUser}
-            className="w-full outline-none hover:bg-[#fbfbfb] px-5 py-1 rounded-sm transition-colors duration-200 ease-in-out hover:shadow-sm"
+            className={clsx(
+              "w-full outline-none hover:bg-[#fbfbfb] px-3 rounded-sm",
+              "flex gap-2 items-center text-sm",
+              "transition-colors duration-200 ease-in-out hover:shadow-sm"
+            )}
           >
+            <CiLogout size={20} />
             Logout
           </button>
         </div>
