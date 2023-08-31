@@ -15,6 +15,7 @@ import Seo from "@/components/core/seo";
 import Lines from "@/components/others/lines";
 import Head from "@/components/others/header";
 import Layout from "@/components/core/layout";
+import { User } from "@/lib/slices/user-slices";
 
 type Inputs = {
   name: string;
@@ -25,7 +26,7 @@ type Inputs = {
   pdf: FileList;
 };
 
-export default function Laporan() {
+export default function Laporan({ user }: { user: User }) {
   const [open, setOpen] = useState<boolean>(false);
   const [opens, setOpens] = useState<boolean>(false);
   const { postForm } = useAppStore();
@@ -75,6 +76,8 @@ export default function Laporan() {
                 id="name"
                 label="Nama"
                 placeholder="Masukkan nama anda"
+                defaultValue={user?.username}
+                readOnly
                 required
               />
               <LaporanInput
@@ -82,6 +85,8 @@ export default function Laporan() {
                 label="Email"
                 placeholder="Masukkan email anda"
                 type="email"
+                defaultValue={user?.username + "@gmail.com"}
+                readOnly
                 required
               />
               <LaporanInput
