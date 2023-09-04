@@ -10,7 +10,7 @@ export default function CircleDiterima() {
         </div>
         <div>
           <Typography variant="smallbold">Draft</Typography>
-          <Typography variant="small">1 September 2023</Typography>
+          <Typography variant="small">4 September 2023</Typography>
         </div>
       </section>
       <section className="flex gap-3 items-center mb-2">
@@ -19,7 +19,7 @@ export default function CircleDiterima() {
         </div>
         <div>
           <Typography variant="smallbold">Permohonan Diterima</Typography>
-          <Typography variant="small">2 September 2023</Typography>
+          <Typography variant="small">5 September 2023</Typography>
         </div>
       </section>
       <section className="flex gap-3 items-center mb-2">
